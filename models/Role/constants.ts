@@ -15,3 +15,12 @@ export const role_options = [
   { label: "Cliente", value: Role.CLIENT },
   { label: "Usuario", value: Role.USER },
 ];
+
+export const rolesDB = [
+  { name: Role.ADMIN },
+  { name: Role.CEO },
+  { name: Role.EMPLOYEE },
+  { name: Role.MANAGER },
+  { name: Role.CLIENT },
+  { name: Role.USER },
+];

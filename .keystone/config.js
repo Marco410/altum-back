@@ -418,7 +418,7 @@ var linkHooks = {
     if (item) {
       return item.link;
     }
-    const baseLink = `${resolvedData.name.toLowerCase()}-${resolvedData.lastName.toLowerCase()}`;
+    const baseLink = `${resolvedData.name.toLowerCase()}-${resolvedData.lastName.toLowerCase()}`.replace(/ñ/g, "n").replace(/[^a-z0-9-]/g, "");
     let uniqueLink = baseLink;
     let existingUser = await context.db.User.findOne({
       where: { link: uniqueLink }
